@@ -1,10 +1,9 @@
-import collection from "@/public/images/collections.jpg";
 import Image from "next/image";
 
+import collection from "@/public/images/collections.jpg";
 import user_1 from "@/public/images/user-1.png";
 import user_2 from "@/public/images/user-2.png";
 import user_3 from "@/public/images/user-3.png";
-
 import check_icon from "@/public/images/icons/check.svg";
 
 const TOP_SELLERS = [

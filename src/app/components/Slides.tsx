@@ -39,7 +39,7 @@ function Slides() {
       {SLIDE_IMAGES.map((item) => {
         return (
           <SwiperSlide key={item.id}>
-            <Image src={item.image} alt="slide image" />
+            <Image src={item.image} alt="slide image" className="w-full" />
           </SwiperSlide>
         );
       })}

@@ -1,4 +1,5 @@
 import Featured from "./components/Featured";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Offer from "./components/Offer";
 import Services from "./components/Services";
@@ -14,6 +15,7 @@ export default function Home() {
       <Offer />
       <Products />
       <Featured />
+      <Footer />
     </div>
   );
 }
