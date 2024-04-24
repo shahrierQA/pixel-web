@@ -50,7 +50,7 @@ function HeroSlider() {
               <Image
                 src={item.image}
                 alt="slide image"
-                className="w-full md:h-[unset] h-[100vh] md:object-[unset] object-cover"
+                className="w-full md:h-[unset] h-[90vh] md:object-[unset] object-cover"
               />
 
               <div className="absolute md:p-16 p-4 md:bottom-10 md:left-10 bottom-20 left-0">
