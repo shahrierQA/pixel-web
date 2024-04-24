@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  transition: all 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --section-margin-primary: 60px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-ui-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.section-margin-primary {
+  margin-top: var(--section-margin-primary);
+}
+
+.swiper-pagination {
+  @apply pb-6 flex items-center justify-center gap-4;
+}
+
+.swiper-pagination-bullet {
+  @apply !w-4 !h-4 border-2 border-white !bg-transparent !opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-red-600 border-0;
+}
+
+.service-card {
+  @apply relative;
+}
+
+.service-card-overlay {
+  @apply bg-black/65 absolute w-full h-full left-0 right-0 top-0 bottom-0 opacity-60 translate-x-0 duration-300 ease-in-out;
+}
+
+.service-card:hover .service-card-overlay {
+  @apply opacity-20;
+}
+
+.service-card:hover .right-arrow {
+  transition: all 0.3s;
+  transform: translateX(-35px);
+}
+
+.product-box {
+  @apply px-5;
+}
+
+.product-box:not(:last-of-type) {
+  @apply border-r border-gray-200;
 }
