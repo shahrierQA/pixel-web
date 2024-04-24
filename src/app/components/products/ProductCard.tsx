@@ -43,11 +43,9 @@ function ProductCard(props: ProductProps) {
           />
         </button>
 
-        <div className="">
-          <button>
-            <Image src={comparison_icon} alt="comparison icon" height={14} />
-          </button>
-        </div>
+        <button>
+          <Image src={comparison_icon} alt="comparison icon" height={14} />
+        </button>
       </div>
 
       <Image src={item.image} alt="comparison icon" />

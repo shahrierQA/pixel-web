@@ -15,11 +15,11 @@ function Offer() {
     <section className="section-margin-primary">
       <div className="container">
         <div className="grid grid-cols-2 gap-6">
-          <div>
+          <div className="md:block hidden">
             <Image src={camera_man} alt="Man with cameras" placeholder="blur" />
           </div>
 
-          <div className="max-w-lg">
+          <div className="md:max-w-lg md:col-span-1 col-span-full">
             <h3 className="text-2xl font-bold">
               New to photography? Let us help!
             </h3>
@@ -73,7 +73,7 @@ interface RenderRowProps {
 
 function RenderRow({ image, title, text, link }: RenderRowProps) {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 md:flex-row flex-col">
       <div>
         <Image src={image} alt={title} placeholder="blur" />
       </div>

@@ -33,11 +33,11 @@ function Services() {
   return (
     <section className="section-margin-primary">
       <div className="container">
-        <div className="flex gap-6">
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
           {SERVICE_ITEMS.map((item) => {
             return (
               <div key={item.id} className="service-card">
-                <div className="service-card-overlay"></div>
+                <div className="service-card-overlay md:block hidden"></div>
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -45,15 +45,19 @@ function Services() {
                   quality={75}
                 />
 
-                <div className="flex items-center justify-between absolute bottom-2 w-full px-6 z-10">
+                <div className="flex items-center justify-between md:absolute bottom-2 w-full md:px-6 z-10">
                   <div className="space-y-1">
-                    <h3 className="text-xl text-ui-white">{item.title}</h3>
-                    <p className="text-sm text-ui-gray">{item.text}</p>
+                    <h3 className="text-md font-bold md:text-ui-white text-ui-black">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-ui-gray md:block hidden">
+                      {item.text}
+                    </p>
                   </div>
                   <Image
                     src={arrow_right}
                     alt="Arrow right icon"
-                    height={18}
+                    height={16}
                     className="right-arrow"
                   />
                 </div>

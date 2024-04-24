@@ -22,6 +22,14 @@ input:focus {
   margin-top: var(--section-margin-primary);
 }
 
+.camera-sub-menu {
+  display: none;
+}
+
+.menu-camera:hover .camera-sub-menu {
+  display: block;
+}
+
 .swiper-pagination {
   @apply pb-6 flex items-center justify-center gap-4;
 }
@@ -52,9 +60,9 @@ input:focus {
 }
 
 .product-box {
-  @apply px-5;
+  @apply md:px-5 py-5;
 }
 
 .product-box:not(:last-of-type) {
-  @apply border-r border-gray-200;
+  @apply md:border-r border-b border-gray-200;
 }
